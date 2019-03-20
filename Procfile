@@ -1,2 +1,1 @@
-web: java $JAVA_OPTS -jar web-service/target/web-service-0.0.1-SNAPSHOT.jar --server.port=$PORT
-worker: java $JAVA_OPTS -jar worker-service/target/worker-service-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -jar /tmp/build_a7927c17b27306dad533568782755320/target/dkmh-spring-0.0.1-SNAPSHOT.war --server.port=$PORT
