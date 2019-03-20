@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar tmp/build_a7927c17b27306dad533568782755320/target/dkmh-spring-0.0.1-SNAPSHOT.war --server.port=$PORT
+web: java $JAVA_OPTS -jar /app/tmp/cache/.m2/repository/com/example/dkmh-spring/0.0.1-SNAPSHOT/dkmh-spring-0.0.1-SNAPSHOT.war --server.port=$PORT
