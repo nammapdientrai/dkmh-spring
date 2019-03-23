@@ -1,1 +1,1 @@
-web: sh startServer-heroku.sh
+web: java -jar target/*.war
