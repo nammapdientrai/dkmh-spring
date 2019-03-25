@@ -1,10 +1,14 @@
 package com.example.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -38,6 +42,10 @@ public class Students {
 
 	@Column(name = "dc_sv")
 	private String dc_sv;
+
+	@ManyToMany
+	@JoinTable(name = "dkmh", joinColumns = @JoinColumn(name = "maso_sv"), inverseJoinColumns = @JoinColumn(name = "ma_mh"))
+	private List<Subjects> subjects;
 
 	public Students() {
 	}
@@ -125,6 +133,14 @@ public class Students {
 
 	public void setDc_sv(String dc_sv) {
 		this.dc_sv = dc_sv;
+	}
+
+	public List<Subjects> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(List<Subjects> subjects) {
+		this.subjects = subjects;
 	}
 
 }
